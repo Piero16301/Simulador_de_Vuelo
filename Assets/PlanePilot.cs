@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlanePilot : MonoBehaviour
 {
-	public float speed = 90.0f;
+	public float speed = 50.0f;
 
     // Start is called before the first frame update
     void Start()
