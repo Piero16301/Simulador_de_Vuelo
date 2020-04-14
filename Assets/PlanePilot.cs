@@ -29,7 +29,11 @@ public class PlanePilot : MonoBehaviour
 			speed = 35.0f;
 		}
 
-		transform.Rotate(Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal"));
+		if (speed > 90.0f) {
+			speed = 90.0f;
+		}
+
+		transform.Rotate(Input.GetAxis("Vertical"), Input.GetAxis("Direction"), -Input.GetAxis("Horizontal"));
 
 		float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
 		if (terrainHeightWhereWeAre > transform.position.y) {
