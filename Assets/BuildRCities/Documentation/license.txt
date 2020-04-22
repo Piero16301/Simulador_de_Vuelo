@@ -1,0 +1,7 @@
+BuildR 3 BETA Test
+5th February 2020
+
+The user is granted to a time limited 30 day evaluation period to use this software within Unity.
+During this time, the user is permitted to used the contents of this Unitypackage to trial BuildR 3.
+The user is not permitted to distribute this demo in commercial products.
+This asset is provided "as is" without warranty of any kind, either expressed or implied, including but not limited to the implied warranties of merchantability and/or fitness for a particular purpose.

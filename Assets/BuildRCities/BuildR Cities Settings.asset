@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2041753955, guid: f4a09ccfdf71b7f42bc6944a77c1a7de, type: 3}
+  m_Name: BuildR Cities Settings
+  m_EditorClassIdentifier: 
+  minimumRoomWidth: 1
+  newPlanSquareSize: 20
+  minimumWindowWidth: 0.1
+  maximumWindowWidth: 6
+  defaultWindowWidth: 0.8
+  defaultDoorWidth: 1.25
+  minimumWindowHeight: 0.1
+  maximumWindowHeight: 6
+  defaultWindowHeight: 1.5
+  defaultDoorHeight: 2.25
+  minimumWindowDepth: 0.05
+  maximumWindowDepth: 1
+  defaultWindowDepth: 0.01
+  previewGableWidth: 2.75
+  previewGableHeight: 2
+  previewGableThickness: 0.25
+  mainLineColour: {r: 1, g: 1, b: 1, a: 0.5}
+  subLineColour: {r: 1, g: 1, b: 1, a: 0.25}
+  invertLineColour: {r: 0, g: 0, b: 0.3, a: 0.75}
+  highlightedBlueprintColour: {r: 0.2, g: 0.6, b: 0.6, a: 0.5}
+  selectedBlueprintColour: {r: 0, g: 0, b: 0.8, a: 0.5}
+  unselectedBlueprintColour: {r: 0.1, g: 0, b: 0.4, a: 0.2}
+  removeBlueprintColour: {r: 1, g: 0, b: 0.4, a: 0.2}
+  removeBlueprintHighlightColour: {r: 1, g: 0, b: 0.4, a: 0.8}
+  removalColour: {r: 1, g: 0, b: 0, a: 0.78}
+  selectedPointColour: {r: 0, g: 1, b: 0, a: 0.78}
+  warningColour: {r: 1, g: 0.7, b: 0, a: 0.98}
+  errorColour: {r: 1, g: 0, b: 0, a: 0.98}
+  newElementColour: {r: 1, g: 1, b: 0.35, a: 0.98}
+  roomFloorColour: {r: 0, g: 0, b: 0.8, a: 0.5}
+  roomWallColour: {r: 0, g: 0.7, b: 0.8, a: 0.5}
+  roomWallSelectedColour: {r: 0, g: 0.9, b: 0.2, a: 0.6}
+  anchorColour: {r: 1, g: 1, b: 0, a: 0.25}
+  linkedAnchorColour: {r: 1, g: 0, b: 0, a: 0.35}
+  volumeIcon: {fileID: 0}
+  floorplanIcon: {fileID: 0}
+  surfacesIcon: {fileID: 0}
+  facadesIcon: {fileID: 0}
+  roofsIcon: {fileID: 0}
+  detailsIcon: {fileID: 0}
+  optionsIcon: {fileID: 0}
+  exportIcon: {fileID: 0}
+  logo: {fileID: 0}
+  warning: {fileID: 0}
+  dot: {fileID: 0}
+  blueDot: {fileID: 0}
+  redDot: {fileID: 0}
+  greenDot: {fileID: 0}
+  yellowDot: {fileID: 0}
+  snapToGrid: 1
+  snapToWorldGrid: 1
+  snapToLocalGrid: 1
+  highlightPerpendicularity: 1
+  highlightPerpendicularityColour: {r: 0, g: 1, b: 0, a: 0.6}
+  highlightAngleColour: {r: 1, g: 0, b: 0.65, a: 0.6}
+  pluginLocation: Assets/BuildRCities/
+  editorTextureLocation: Internal/Materials/
+  newObjectLocation: BuildRCities/AssetFiles
+  iconPreviews: 1
+  editModeAddRoom: 113
+  editModeAddRoomPoint: 119
+  editModeAddDoor: 101
+  editModeAddWindow: 114
+  editModeAddVerticalSpace: 116
+  recommendedBias: 0.01
+  recommendedNormalBias: 0.001
+  editMode: 0
+  showFloorplanShortcutKeys: 1
+  debug: 0
+  defaultIcon: {fileID: 0}

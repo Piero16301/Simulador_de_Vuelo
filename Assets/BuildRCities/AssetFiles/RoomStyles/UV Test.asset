@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb27d9c5f4bc4cccb8b87aafa6b9576, type: 3}
+  m_Name: UV Test
+  m_EditorClassIdentifier: 
+  _content:
+    _name: 
+    _defaultName: 
+    _buid: 6371383665891920161926932224
+    _nameHash: 0
+    _guid: 6776c3a10edc1f943bc109f7b2baf38b
+    _usedDynamicTextures:
+    - 636881098070577990832329088
+    - 6371383669569761471169633024
+    - 6368810980705579871938059648
+    _usedMaterials: []
+    _hasBlankTextures: 0
+    _seed: 58
+    _position: {x: 0, y: 0, z: 0}
+    _bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    _radius: 0
+    _floorDynamicTextureId: 636881098070577990832329088
+    _wallDynamicTextureId: 6371383669569761471169633024
+    _ceilingDynamicTextureId: 6368810980705579871938059648
+  _floorDynamicTextureAsset: {fileID: 11400000, guid: bec5d44f9276b3a4da789e090c302e8b,
+    type: 2}
+  _wallDynamicTextureAsset: {fileID: 11400000, guid: 679dd22aafc55e445950e8a023bd6078,
+    type: 2}
+  _ceilingDynamicTextureAsset: {fileID: 11400000, guid: 42ce7e9508ff3b94fae1297223023588,
+    type: 2}

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1647690729, guid: f4a09ccfdf71b7f42bc6944a77c1a7de, type: 3}
+  m_Name: Facade
+  m_EditorClassIdentifier: 
+  _content:
+    _name: 
+    _defaultName: 
+    _buid: 637175301837924460976311488
+    _nameHash: 0
+    _version: 3.0.0b
+    _usedTextures:
+    - 6371748149906103272091745792
+    - 6371748154054467691699881856
+    _usedMaterials: []
+    _hasBlankTextures: 1
+    _seed: 58
+    _randomGenerator:
+      _seed: 58
+      _mZ: 58
+      _mW: 58
+    _position: {x: 0, y: 0, z: 0}
+    _bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    _radius: 0
+    _collapseChildData: 0
+    basePattern:
+    - 6371770189873230171233414272
+    _hasGroundFloorPattern: 0
+    groundFloorPattern:
+    - 
+    _usedWallSections:
+    - 6371770189873230171233414272
+    - 
+    _baseWidth: 1
+    _baseHeight: 1
+    _patternAnchors: 0
+    _stretchMode: 0
+    _tiled: 1
+    _stringCourse: 0
+    _stringCourseHeight: 0.12
+    _stringCourseDepth: 0.08
+    _stringCoursePosition: 0
+    _stringCourseDynamicTextureId: 
+    _randomisationMode: 1
+    _previewTexture: {fileID: 0}
+    _customIconPath: 
+  _baseAssetPattern:
+  - {fileID: 11400000, guid: 423ae60702bdd5b4caf7af0470720267, type: 2}
+  _groundFloorAssetPattern:
+  - {fileID: 0}
+  _stringCourseDynamicTextureAsset: {fileID: 0}
+  _previewTexture: {fileID: 0}
+  _customIconPath: 

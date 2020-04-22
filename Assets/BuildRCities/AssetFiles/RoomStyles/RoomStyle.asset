@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb27d9c5f4bc4cccb8b87aafa6b9576, type: 3}
+  m_Name: RoomStyle
+  m_EditorClassIdentifier: 
+  _content:
+    _name: 
+    _defaultName: 
+    _buid: 636881098070878056503248256
+    _nameHash: 0
+    _guid: d5bf28c468ced1f449c835fc47bb1c15
+    _usedDynamicTextures:
+    - 6368810980705579871938059648
+    - 6368810980705779901167383040
+    - 6368810980705380101211409152
+    _usedMaterials: []
+    _hasBlankTextures: 0
+    _seed: 58
+    _position: {x: 0, y: 0, z: 0}
+    _bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    _radius: 0
+    _floorDynamicTextureId: 6368810980705579871938059648
+    _wallDynamicTextureId: 6368810980705779901167383040
+    _ceilingDynamicTextureId: 6368810980705380101211409152
+  _floorDynamicTextureAsset: {fileID: 11400000, guid: 42ce7e9508ff3b94fae1297223023588,
+    type: 2}
+  _wallDynamicTextureAsset: {fileID: 11400000, guid: 5d0c5262ea0e5294c81e69eac52a6a51,
+    type: 2}
+  _ceilingDynamicTextureAsset: {fileID: 11400000, guid: d080e21bef1e7054f94e3135fdb79e6c,
+    type: 2}
