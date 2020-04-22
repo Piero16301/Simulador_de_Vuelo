@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanePilot : MonoBehaviour
 {
-	public float speed = 50.0f;
+	public float speed = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,15 +25,23 @@ public class PlanePilot : MonoBehaviour
 
 		speed -= transform.forward.y * Time.deltaTime * 50.0f;
 
-		if (speed < 35.0f) {
-			speed = 35.0f;
+		if (Input.GetKey(KeyCode.W)) {
+			speed += Time.deltaTime * 50.0f;
 		}
 
-		if (speed > 90.0f) {
-			speed = 90.0f;
+		if (Input.GetKey(KeyCode.S)) {
+			speed -= Time.deltaTime * 50.0f;
 		}
 
-		transform.Rotate(Input.GetAxis("Vertical"), Input.GetAxis("Direction"), -Input.GetAxis("Horizontal"));
+		if (speed < 0.0f) {
+			speed = 0.0f;
+		}
+
+		if (speed > 100.0f) {
+			speed = 100.0f;
+		}
+
+		transform.Rotate(Input.GetAxis("Vertical"), 0.3f * Input.GetAxis("Direction"), -Input.GetAxis("Horizontal"));
 
 		float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
 		if (terrainHeightWhereWeAre > transform.position.y) {
