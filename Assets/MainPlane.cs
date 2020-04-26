@@ -19,29 +19,29 @@ public class MainPlane : MonoBehaviour
 		float bias = 0.96f;
 		Camera.main.transform.position = Camera.main.transform.position * bias +
 			moveCamTo * (1.0f - bias);
-		Camera.main.transform.LookAt(transform.position + transform.forward * 30.0f);
+		Camera.main.transform.LookAt(transform.position + transform.forward * 50.0f);
 		
 		transform.position += transform.forward * Time.deltaTime * speed;
 		
 		speed -= transform.forward.y * Time.deltaTime * 50.0f;
 		
 		if (Input.GetKey(KeyCode.W)) {
-			speed += Time.deltaTime * 50.0f;
+			speed += Time.deltaTime * 20.0f;
 		}
 		
 		if (Input.GetKey(KeyCode.S)) {
-			speed -= Time.deltaTime * 50.0f;
+			speed -= Time.deltaTime * 20.0f;
 		}
 		
-		if (speed < 0.0f) {
+		/*if (speed < 0.0f) {
 			speed = 0.0f;
-		}
+		}*/
 		
 		if (speed > 100.0f) {
 			speed = 100.0f;
 		}
 		
-		transform.Rotate(Input.GetAxis("Vertical"), 0.3f * Input.GetAxis("Direction"), -Input.GetAxis("Horizontal"));
+		transform.Rotate(0.15f * Input.GetAxis("Vertical"), 0.1f * Input.GetAxis("Direction"), 0.2f * -Input.GetAxis("Horizontal"));
 		
 		float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
 		if (terrainHeightWhereWeAre > transform.position.y) {
