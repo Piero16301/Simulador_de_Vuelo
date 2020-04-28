@@ -1,2 +1,2 @@
-# Simulador_de_Vuelo
+# Simulador de Vuelo
 Entorno de simulación de vuelo con Unity.
