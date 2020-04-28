@@ -5,21 +5,38 @@ using UnityEngine;
 public class MainPlane : MonoBehaviour
 {
 	public float speed = 0.0f;
+	public Camera FirstPersonCam;
+	public bool cameraSwitch = false;
+	Camera ThirdPersonCam;
 	
 	// Start is called before the first frame update
 	void Start()
 	{
 		Debug.Log("plane pilot script added to: " + gameObject.name);
+		ThirdPersonCam = Camera.main;
+		ThirdPersonCam.enabled = true;
+		FirstPersonCam.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.V)) {
+			if (FirstPersonCam.enabled) {
+				ThirdPersonCam.enabled = true;
+				FirstPersonCam.enabled = false;
+			}
+			else if (!FirstPersonCam.enabled) {
+				ThirdPersonCam.enabled = false;
+				FirstPersonCam.enabled = true;
+			}
+		}
+
 		Vector3 moveCamTo = transform.position - transform.forward * 80.0f + Vector3.up * 30.0f;
 		float bias = 0.96f;
-		Camera.main.transform.position = Camera.main.transform.position * bias +
+		ThirdPersonCam.transform.position = ThirdPersonCam.transform.position * bias +
 			moveCamTo * (1.0f - bias);
-		Camera.main.transform.LookAt(transform.position + transform.forward * 50.0f);
+		ThirdPersonCam.transform.LookAt(transform.position + transform.forward * 50.0f);
 		
 		transform.position += transform.forward * Time.deltaTime * speed;
 		
