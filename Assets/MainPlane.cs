@@ -41,15 +41,11 @@ public class MainPlane : MonoBehaviour
 		transform.position += transform.forward * Time.deltaTime * speed;
 		
 		speed -= transform.forward.y * Time.deltaTime * 50.0f;
-		
-		if (Input.GetKey(KeyCode.W)) {
-			speed += Time.deltaTime * 20.0f;
+
+		if (Input.GetAxis ("Speed") != 0.0f) {
+			speed += Input.GetAxis ("Speed") * Time.deltaTime * 20.0f;
 		}
-		
-		if (Input.GetKey(KeyCode.S)) {
-			speed -= Time.deltaTime * 20.0f;
-		}
-		
+
 		/*if (speed < 0.0f) {
 			speed = 0.0f;
 		}*/
