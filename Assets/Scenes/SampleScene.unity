@@ -539,7 +539,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5177,8 +5176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  FirstPersonCam: {fileID: 0}
+  FirstPersonCam: {fileID: 752400783}
   cameraSwitch: 0
+  FirstPersonCanvas: {fileID: 958432797}
 --- !u!1 &8478967240052995133
 GameObject:
   m_ObjectHideFlags: 0

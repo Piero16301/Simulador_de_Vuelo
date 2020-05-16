@@ -7,6 +7,7 @@ public class MainPlane : MonoBehaviour
 	public float speed = 0.0f;
 	public Camera FirstPersonCam;
 	public bool cameraSwitch = false;
+	public Canvas FirstPersonCanvas;
 	Camera ThirdPersonCam;
 	
 	// Start is called before the first frame update
@@ -14,6 +15,7 @@ public class MainPlane : MonoBehaviour
 	{
 		Debug.Log("plane pilot script added to: " + gameObject.name);
 		ThirdPersonCam = Camera.main;
+		FirstPersonCanvas.gameObject.SetActive(false);
 		ThirdPersonCam.enabled = true;
 		FirstPersonCam.enabled = false;
 	}
@@ -25,10 +27,12 @@ public class MainPlane : MonoBehaviour
 			if (FirstPersonCam.enabled) {
 				ThirdPersonCam.enabled = true;
 				FirstPersonCam.enabled = false;
+				FirstPersonCanvas.gameObject.SetActive(false);
 			}
 			else if (!FirstPersonCam.enabled) {
 				ThirdPersonCam.enabled = false;
 				FirstPersonCam.enabled = true;
+				FirstPersonCanvas.gameObject.SetActive(true);
 			}
 		}
 
