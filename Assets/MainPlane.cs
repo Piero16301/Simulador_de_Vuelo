@@ -5,6 +5,15 @@ using UnityEngine;
 using System.IO.Ports;
 using System;
 
+using com.shephertz.app42.gaming.multiplayer.client;
+using com.shephertz.app42.gaming.multiplayer.client.events;
+using com.shephertz.app42.gaming.multiplayer.client.listener;
+using com.shephertz.app42.gaming.multiplayer.client.command;
+using com.shephertz.app42.gaming.multiplayer.client.message;
+using com.shephertz.app42.gaming.multiplayer.client.transformer;
+
+//using AssemblyCSharp;
+
 public class MainPlane : MonoBehaviour
 {
 	public float speed = 0.0f;
@@ -12,6 +21,9 @@ public class MainPlane : MonoBehaviour
 	public bool cameraSwitch = false;
 	public Canvas FirstPersonCanvas;
 	Camera ThirdPersonCam;
+
+	public static string apiKey = "1b424fc63486fcc47ad6974aef4d3bd877c93b878f645250244eb8dec91bcfa8";
+	public static string secretKey = "cbc5b0c85a1f331878e0703abe76749859c8d7f798f284a914f26622874655d2";
 
 	SerialPort arduinoPort = new SerialPort("COM8");
 
