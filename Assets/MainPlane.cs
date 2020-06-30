@@ -12,7 +12,7 @@ using com.shephertz.app42.gaming.multiplayer.client.command;
 using com.shephertz.app42.gaming.multiplayer.client.message;
 using com.shephertz.app42.gaming.multiplayer.client.transformer;
 
-//using AssemblyCSharp;
+using AssemblyCSharp;
 
 public class MainPlane : MonoBehaviour
 {
@@ -22,19 +22,11 @@ public class MainPlane : MonoBehaviour
 	public Canvas FirstPersonCanvas;
 	Camera ThirdPersonCam;
 
-	public static string apiKey = "1b424fc63486fcc47ad6974aef4d3bd877c93b878f645250244eb8dec91bcfa8";
-	public static string secretKey = "cbc5b0c85a1f331878e0703abe76749859c8d7f798f284a914f26622874655d2";
-
-	SerialPort arduinoPort = new SerialPort("COM8");
-
-	private void Awake()
-	{
-		arduinoPort.BaudRate = 9600;
-		arduinoPort.Parity = Parity.None;
-		arduinoPort.StopBits = StopBits.One;
-		arduinoPort.DataBits = 8;
-		arduinoPort.Handshake = Handshake.None;
-	}
+	public static string apiKey = "9ce5f303a889540af8e432356913aac65f1d2eb9f79e07f2d48825e4eaecf2a5";
+	public static string secretKey = "a00191f1588b190550a51814cfe35b1c957775c0114f2aa80c9f5749741e3a9c";
+	public static string roomid = "426048572";
+	public static string username;
+	//Listener listen = new Listener();
 
 	// Start is called before the first frame update
 	void Start()
@@ -44,7 +36,23 @@ public class MainPlane : MonoBehaviour
 		FirstPersonCanvas.gameObject.SetActive(false);
 		ThirdPersonCam.enabled = true;
 		FirstPersonCam.enabled = false;
+
+		// Inicia comunicación con servidor
+		/*WarpClient.initialize(apiKey, secretKey);
+		WarpClient.GetInstance().AddConnectionRequestListener(listen);
+		WarpClient.GetInstance().AddChatRequestListener(listen);
+		WarpClient.GetInstance().AddUpdateRequestListener(listen);
+		WarpClient.GetInstance().AddLobbyRequestListener(listen);
+		WarpClient.GetInstance().AddNotificationListener(listen);
+		WarpClient.GetInstance().AddRoomRequestListener(listen);
+		WarpClient.GetInstance().AddZoneRequestListener(listen);
+		WarpClient.GetInstance().AddTurnBasedRoomRequestListener(listen);
+		username = System.DateTime.UtcNow.Ticks.ToString();
+		WarpClient.GetInstance().Connect(username);*/
 	}
+
+	public float interval = 0.1f;
+	float timer = 0;
 
 	// Update is called once per frame
 	void Update()
@@ -91,24 +99,22 @@ public class MainPlane : MonoBehaviour
 
 		transform.Rotate(0.15f * Input.GetAxis("Vertical"), 0.1f * Input.GetAxis("Direction"), 0.2f * -Input.GetAxis("Horizontal"));
 
-		UnityEngine.Debug.Log("X:" + Math.Round(transform.rotation.eulerAngles.x, 2) + " Y:" + Math.Round(transform.rotation.eulerAngles.y, 2) + " Z:" + Math.Round(transform.rotation.eulerAngles.z, 2));
-		
-		//SendMessageToArduino("X:" + Math.Round(transform.rotation.eulerAngles.x, 2) + " Y:" + Math.Round(transform.rotation.eulerAngles.y, 2) + " Z:" + Math.Round(transform.rotation.eulerAngles.z, 2));
+		//Envío mensaje servidor
+		timer -= Time.deltaTime;
+		if (timer < 0)
+		{
+			string json = "{\"x\":\"" + Math.Round(transform.rotation.eulerAngles.x, 2) + "\",\"y\":\"" + Math.Round(transform.rotation.eulerAngles.y, 2) + "\",\"z\":\"" + Math.Round(transform.rotation.eulerAngles.z, 2) + "\"}";
+			//listen.sendMsg(json);
+			UnityEngine.Debug.Log(json);
+			timer = interval;
+		}
+		//WarpClient.GetInstance().Update();
+		//Termina envío servidor
 
 		float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
 		if (terrainHeightWhereWeAre > transform.position.y)
 		{
 			transform.position = new Vector3(transform.position.x, terrainHeightWhereWeAre + 2, transform.position.z);
 		}
-	}
-
-	public void SendMessageToArduino(string message)
-	{
-		arduinoPort.WriteLine(message);
-	}
-
-	public void ClosePort()
-	{
-		arduinoPort.Close();
 	}
 }
