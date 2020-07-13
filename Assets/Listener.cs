@@ -293,7 +293,7 @@ namespace AssemblyCSharp
 		{
 			Log(eventObj.getSender() + " sended " + eventObj.getMessage());
 			com.shephertz.app42.gaming.multiplayer.client.SimpleJSON.JSONNode msg = com.shephertz.app42.gaming.multiplayer.client.SimpleJSON.JSON.Parse(eventObj.getMessage());
-			//msg[0] 
+			//msg[0]
 			if (eventObj.getSender() != appwarp.username)
 			{
 				appwarp.movePlayer(msg["x"].AsFloat, msg["y"].AsFloat, msg["z"].AsFloat);
