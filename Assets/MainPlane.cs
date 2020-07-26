@@ -95,7 +95,7 @@ public class MainPlane : MonoBehaviour
 			StartCoroutine(SimplePostRequest(xAngle, yAngle, zAngle));
 
 			UnityEngine.Debug.Log("x:" + xAngle + " y:" + yAngle + " z:" + zAngle);
-			elapsed = elapsed % 1f;
+			elapsed %= 1f;
 		}
 
 		float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
