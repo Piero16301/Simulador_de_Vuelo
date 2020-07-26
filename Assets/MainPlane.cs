@@ -17,8 +17,8 @@ public class MainPlane : MonoBehaviour
 	Camera ThirdPersonCam;
 
 	// URL para el POST y GET
-	//readonly string getURL = "http://ec2-3-86-241-214.compute-1.amazonaws.com/getSimulador.php";
-	readonly string postURL = "http://ec2-3-86-241-214.compute-1.amazonaws.com/postSimulador.php";
+	//readonly string getURL = "http://ec2-3-17-189-111.us-east-2.compute.amazonaws.com/GETSimulador.php";
+	readonly string postURL = "http://ec2-3-17-189-111.us-east-2.compute.amazonaws.com/POSTSimulador.php";
 
 	// Start is called before the first frame update
 	void Start()
