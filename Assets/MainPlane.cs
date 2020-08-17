@@ -4,7 +4,6 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-using System.IO.Ports;
 using System;
 using System.Globalization;
 
@@ -75,7 +74,7 @@ public class MainPlane : MonoBehaviour
 			speed = 200.0f;
 		}
 
-		transform.Rotate(0.15f * Input.GetAxis("Vertical"), 0.1f * Input.GetAxis("Direction"), 0.2f * -Input.GetAxis("Horizontal"));
+		transform.Rotate(0.2f * Input.GetAxis("Vertical"), 0.2f * Input.GetAxis("Direction"), 0.2f * -Input.GetAxis("Horizontal"));
 
 		//Envío mensaje servidor
 		elapsed += Time.deltaTime;
