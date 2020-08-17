@@ -22,7 +22,7 @@ public class MainPlane : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		UnityEngine.Debug.Log("plane pilot script added to: " + gameObject.name);
+		UnityEngine.Debug.Log("Script agregado a objeto: " + gameObject.name);
 		ThirdPersonCam = Camera.main;
 		FirstPersonCanvas.gameObject.SetActive(false);
 		ThirdPersonCam.enabled = true;
@@ -34,7 +34,7 @@ public class MainPlane : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.V))
+		if (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.JoystickButton0)) //Square key on DS4
 		{
 			if (FirstPersonCam.enabled)
 			{
@@ -87,9 +87,9 @@ public class MainPlane : MonoBehaviour
 			double yValue = Math.Round(transform.rotation.eulerAngles.y, 2);
 			double zValue = Math.Round(transform.rotation.eulerAngles.z, 2);
 
-			string xAngle = xValue.ToString("G", CultureInfo.InvariantCulture);
-			string yAngle = yValue.ToString("G", CultureInfo.InvariantCulture);
-			string zAngle = zValue.ToString("G", CultureInfo.InvariantCulture);
+			string xAngle = "G" + xValue.ToString("G", CultureInfo.InvariantCulture);
+			string yAngle = "G" + yValue.ToString("G", CultureInfo.InvariantCulture);
+			string zAngle = "G" + zValue.ToString("G", CultureInfo.InvariantCulture);
 
 			StartCoroutine(SimplePostRequest(xAngle, yAngle, zAngle));
 

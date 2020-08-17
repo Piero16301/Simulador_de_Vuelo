@@ -7,14 +7,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.connect.share": {
-      "version": "file:C:/Users/piero/Downloads/package",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.unity.uiwidgets": "1.5.4-preview.8"
-      }
-    },
     "com.unity.ext.nunit": {
       "version": "1.0.0",
       "depth": 1,
@@ -80,13 +72,6 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "com.unity.uiwidgets": {
-      "version": "1.5.4-preview.8",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
